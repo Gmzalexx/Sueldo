@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:Sueldo"
+             x:Class="Sueldo.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:sueldomvvm/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Entry Placeholder="Sueldo Actual" Text="{Binding SueldoActual}" />
+        <Button Text="Calcular Nuevo Sueldo" Command="{Binding CalcularNuevoSueldo}" />
+        <Label Text="Nuevo Sueldo:" />
+        <Label Text="{Binding NuevoSueldo}" />
+    </StackLayout>
+
+</ContentPage>
